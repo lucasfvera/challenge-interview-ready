@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function API(
+	data: unknown
+): Promise<{ ok: boolean; success: string; error: string }> {
+	const responseOk = Math.random() > 0.3;
+	return new Promise((res) => {
+		setTimeout(
+			() =>
+				res({
+					ok: responseOk,
+					success: 'Your Account has been successfully created!',
+					error: 'Username is taken',
+				}),
+			1000
+		);
+	});
 }
 
-export default App
+const submitUser = async (formData: FormData) => {
+	const username = formData.get('user-email');
+	const password = formData.get('password');
+	try {
+		const res = await API({ username, password });
+		if (res.ok) {
+			window.alert(res.success);
+		} else {
+			throw new Error(res.error);
+		}
+	} catch (err) {
+		console.error(err);
+	}
+};
+
+function App() {
+	return (
+		<>
+			<h1>Sign Up Form with Vite</h1>
+			<form action={submitUser} name="sign-up-form">
+				<label>
+					Email
+					<input type="email" required name="user-email" />
+				</label>
+				<label>
+					Password
+					<input type="password" required name="password" />
+				</label>
+				<button type="submit">Submit</button>
+			</form>
+		</>
+	);
+}
+
+export default App;
