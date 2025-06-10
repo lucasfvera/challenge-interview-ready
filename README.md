@@ -1,3 +1,9 @@
+# My Solutions
+
+### React Sign Up Form Challenge
+- [vanilla react](solutions/signup-vanilla-react-form/)
+- [validation w/Zod](solutions/signup-form-zod/)
+
 # **Interview Ready**
 
 Este repo está manejado por [Silver.dev](https://silver.dev/) y contiene desafíos varios para diferentes roles y posiciones en startups.
