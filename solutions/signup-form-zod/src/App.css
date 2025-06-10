@@ -1,0 +1,21 @@
+.main-container {
+	padding: 0 32px;
+	margin: auto;
+	max-width: 600px;
+}
+
+.basic-form {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.basic-form__inputs-container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.error {
+	color: red;
+}
