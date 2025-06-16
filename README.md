@@ -1,7 +1,8 @@
 # My Solutions
 
 ### React Sign Up Form Challenge
-- [vanilla react](solutions/signup-vanilla-react-form/)
+- [plain react](solutions/signup-plain-react/)
+- [vanilla form react](solutions/signup-vanilla-react-form/)
 - [validation w/Zod](solutions/signup-form-zod/)
 
 # **Interview Ready**
