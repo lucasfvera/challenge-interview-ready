@@ -5,6 +5,10 @@
 - [vanilla form react](solutions/signup-vanilla-react-form/)
 - [validation w/Zod](solutions/signup-form-zod/)
 
+### React Autocomplete Input Challenge
+- [vanilla react](solutions/autocomplete-vanilla-react/)
+
+
 # **Interview Ready**
 
 Este repo está manejado por [Silver.dev](https://silver.dev/) y contiene desafíos varios para diferentes roles y posiciones en startups.

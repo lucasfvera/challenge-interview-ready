@@ -1,0 +1,29 @@
+body {
+  padding: 16px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: 1px solid black;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.chip {
+  border: 1px solid blue;
+  padding: 0 4px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+input[type="text"] {
+  border: 1px solid gray;
+}
+
+.toggle {
+  cursor: pointer;
+}
